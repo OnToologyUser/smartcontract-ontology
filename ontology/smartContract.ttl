@@ -1,0 +1,456 @@
+@prefix : <http://example.smartcontract.es/sc#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.smartcontract.es/sc> .
+
+<http://example.smartcontract.es/sc> rdf:type owl:Ontology ;
+                                      owl:versionIRI <http://example.smartcontract.es/sc/0.8> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.smartcontract.es/sc#contain
+:contain rdf:type owl:ObjectProperty ;
+         rdfs:comment "Indicates if an Attribute can contains other type of Attributes (ex. Struct can contain an Array)" ;
+         rdfs:label "contains" .
+
+
+###  http://example.smartcontract.es/sc#hasArrayDimension
+:hasArrayDimension rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Relation between the Array and the dimension of this Array" ;
+                   rdfs:label "has Array Dimension" .
+
+
+###  http://example.smartcontract.es/sc#hasArrayElement
+:hasArrayElement rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Relation between Array and ElementInArray" ;
+                 rdfs:label "has Array Element" .
+
+
+###  http://example.smartcontract.es/sc#hasAttribute
+:hasAttribute rdf:type owl:ObjectProperty ;
+              rdfs:comment "Indicates if the Contract has Attributes" ;
+              rdfs:label "has Attribute" .
+
+
+###  http://example.smartcontract.es/sc#hasFunction
+:hasFunction rdf:type owl:ObjectProperty ;
+             rdfs:comment "Indicates if the Contract has Functions" ;
+             rdfs:label "has Function" .
+
+
+###  http://example.smartcontract.es/sc#hasMapElement
+:hasMapElement rdf:type owl:ObjectProperty ;
+               rdfs:comment "Indicate the relation between MapValues and Map." ;
+               rdfs:label "has Map Element" .
+
+
+###  http://example.smartcontract.es/sc#hasMapKey
+:hasMapKey rdf:type owl:ObjectProperty ;
+           rdfs:comment "In MapValues, indicate the value of a Key given a Map" ;
+           rdfs:label "has Map Key" .
+
+
+###  http://example.smartcontract.es/sc#hasMapKeyType
+:hasMapKeyType rdf:type owl:ObjectProperty ;
+               rdfs:comment "Used in Map for specify the type of the Map Key type" ;
+               rdfs:label "has Map Key Type" .
+
+
+###  http://example.smartcontract.es/sc#hasMapValue
+:hasMapValue rdf:type owl:ObjectProperty ;
+             rdfs:comment "In MapValues, indicate the value of a Value given a Map" ;
+             rdfs:label "has Map Value" .
+
+
+###  http://example.smartcontract.es/sc#hasParameter
+:hasParameter rdf:type owl:ObjectProperty ;
+              rdfs:comment "Indicate if the Function has a parameter (an Attribute value)" ;
+              rdfs:label "has Parameter" .
+
+
+###  http://example.smartcontract.es/sc#hasSimpleData
+:hasSimpleData rdf:type owl:ObjectProperty ;
+               rdfs:comment "Used in simple class for specify the value" ;
+               rdfs:label "has Simple Data" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.smartcontract.es/sc#arrayTypeData
+:arrayTypeData rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Indicate the value type of an Array" .
+
+
+###  http://example.smartcontract.es/sc#hasFunctionContent
+:hasFunctionContent rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Indicates the content of a function" ;
+                    rdfs:label "has Function Content" .
+
+
+###  http://example.smartcontract.es/sc#hasGet
+:hasGet rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:boolean ;
+        rdfs:comment "Indicates if the Attribute has Getter functions" ;
+        rdfs:label "has getter" .
+
+
+###  http://example.smartcontract.es/sc#hasIndex
+:hasIndex rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "Indicate the size of an ArrayElement and ArrayDimension given an Array" ;
+          rdfs:label "has index" .
+
+
+###  http://example.smartcontract.es/sc#hasInheritance
+:hasInheritance rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:comment "In SolidityContract, indicate if the Contract has Inheritance of other contract" ;
+                rdfs:label "has inheritance" .
+
+
+###  http://example.smartcontract.es/sc#hasLenght
+:hasLenght rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:integer ;
+           rdfs:comment "Lenght of an Array in ArrayDimension" ;
+           rdfs:label "has lenght" .
+
+
+###  http://example.smartcontract.es/sc#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The name of a Contract, Attribute or Function" ;
+         rdfs:label "has name" .
+
+
+###  http://example.smartcontract.es/sc#hasSet
+:hasSet rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:boolean ;
+        rdfs:comment "Indicates if the Attribute has Setter functions" ;
+        rdfs:label "has setter" .
+
+
+###  http://example.smartcontract.es/sc#hasSimpleValue
+:hasSimpleValue rdf:type owl:DatatypeProperty ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "Indicate the value of a simple variable (for example, int a = 1, 1 is the value)" ;
+                rdfs:label "has simple value" .
+
+
+###  http://example.smartcontract.es/sc#hasVisibility
+:hasVisibility rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Visibility of an Attribute" ;
+               rdfs:label "has Visibility" .
+
+
+###  http://example.smartcontract.es/sc#imports
+:imports rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:comment "In ContractSpecification, indicate if the Contract imports other contracts" .
+
+
+###  http://example.smartcontract.es/sc#isConstant
+:isConstant rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:boolean ;
+            rdfs:comment "Indicate if a SimpleAttribute is constant (true) or variable (false)" ;
+            rdfs:label "is constant" .
+
+
+###  http://example.smartcontract.es/sc#returnType
+:returnType rdf:type owl:DatatypeProperty ;
+            rdfs:range rdfs:Literal ;
+            rdfs:comment "Indicate the return type of a function (the function return a integer, boolean, etc)" .
+
+
+###  http://example.smartcontract.es/sc#valueType
+:valueType rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Indicate the Value Type of a Map" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.smartcontract.es/sc#Array
+:Array rdf:type owl:Class ;
+       rdfs:subClassOf :Attribute ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasArrayDimension ;
+                         owl:someValuesFrom :ArrayDimension
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasArrayElement ;
+                         owl:someValuesFrom :ElementInArray
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :arrayTypeData ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ;
+       rdfs:comment "Define an Array Attribute" .
+
+
+###  http://example.smartcontract.es/sc#ArrayDimension
+:ArrayDimension rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasIndex ;
+                                  owl:someValuesFrom xsd:integer
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasLenght ;
+                                  owl:someValuesFrom xsd:integer
+                                ] ;
+                rdfs:comment "Contains the dimension of an Array" ;
+                rdfs:label "Array Dimension" .
+
+
+###  http://example.smartcontract.es/sc#Attribute
+:Attribute rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasName ;
+                             owl:someValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasGet ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:boolean
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasSet ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:boolean
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasVisibility ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ;
+           rdfs:comment "Attribute types" .
+
+
+###  http://example.smartcontract.es/sc#ConstantType
+:ConstantType rdf:type owl:Class ;
+              rdfs:subClassOf :SimpleAttribute ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isConstant ;
+                                owl:someValuesFrom xsd:boolean
+                              ] ;
+              rdfs:comment "Define if a SimpleAttribute is a constant (true) or a variable (false)" ;
+              rdfs:label "Constant Type" .
+
+
+###  http://example.smartcontract.es/sc#ContractSpecification
+:ContractSpecification rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasAttribute ;
+                                         owl:someValuesFrom :Attribute
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasFunction ;
+                                         owl:someValuesFrom :Function
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasName ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :imports ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ;
+                       rdfs:comment "Define the name and the imports of the contract" ;
+                       rdfs:label "Contract Specification" .
+
+
+###  http://example.smartcontract.es/sc#ElementInArray
+:ElementInArray rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasIndex ;
+                                  owl:someValuesFrom xsd:integer
+                                ] ;
+                rdfs:comment "Contains the values of an Array" ;
+                rdfs:label "Element In Array" .
+
+
+###  http://example.smartcontract.es/sc#ElementaryType
+:ElementaryType rdf:type owl:Class ;
+                rdfs:subClassOf :PrimitiveType ;
+                rdfs:comment "Contains the elementary types values. Subclass of PrimitiveType" ;
+                rdfs:label "Elementary Type" .
+
+
+###  http://example.smartcontract.es/sc#Function
+:Function rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasParameter ;
+                            owl:someValuesFrom :Attribute
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasName ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasVisibility ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :returnType ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasFunctionContent ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ;
+          rdfs:comment "Define a function inside the contract" .
+
+
+###  http://example.smartcontract.es/sc#GolangContract
+:GolangContract rdf:type owl:Class ;
+                rdfs:subClassOf :ContractSpecification ;
+                owl:disjointWith :SolidityContract ;
+                rdfs:comment "Indicate if the contract is written in Go" ;
+                rdfs:label "Golang Contract" .
+
+
+###  http://example.smartcontract.es/sc#Map
+:Map rdf:type owl:Class ;
+     rdfs:subClassOf :Attribute ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasMapElement ;
+                       owl:someValuesFrom :MapElement
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasMapKeyType ;
+                       owl:someValuesFrom :ElementaryType
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :valueType ;
+                       owl:someValuesFrom xsd:string
+                     ] ;
+     rdfs:comment "Define a Map Attribute" .
+
+
+###  http://example.smartcontract.es/sc#MapElement
+:MapElement rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasMapKey ;
+                              owl:someValuesFrom :Attribute
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasMapValue ;
+                              owl:someValuesFrom :Attribute
+                            ] ;
+            rdfs:comment "Contains the values of a Map" ;
+            rdfs:label "Map Element" .
+
+
+###  http://example.smartcontract.es/sc#PrimitiveType
+:PrimitiveType rdf:type owl:Class ;
+               rdfs:comment "Contains the primitive types values" ;
+               rdfs:label "Primitive Type" .
+
+
+###  http://example.smartcontract.es/sc#SimpleAttribute
+:SimpleAttribute rdf:type owl:Class ;
+                 rdfs:subClassOf :Attribute ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSimpleData ;
+                                   owl:someValuesFrom :PrimitiveType
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSimpleValue ;
+                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                 ] ;
+                 rdfs:comment "Define a Simple Atttribute" ;
+                 rdfs:label "Simple Attribute" .
+
+
+###  http://example.smartcontract.es/sc#SolidityContract
+:SolidityContract rdf:type owl:Class ;
+                  rdfs:subClassOf :ContractSpecification ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasInheritance ;
+                                    owl:someValuesFrom xsd:string
+                                  ] ;
+                  rdfs:comment "Indicate if the contract is written in Solidity" ;
+                  rdfs:label "Solidity Contract" .
+
+
+###  http://example.smartcontract.es/sc#Struct
+:Struct rdf:type owl:Class ;
+        rdfs:subClassOf :Attribute ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :contain ;
+                          owl:someValuesFrom :Array
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :contain ;
+                          owl:someValuesFrom :Map
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :contain ;
+                          owl:someValuesFrom :SimpleAttribute
+                        ] ;
+        rdfs:comment "Define a Struct Attribute" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.smartcontract.es/sc#Address
+:Address rdf:type owl:NamedIndividual ,
+                  :ElementaryType .
+
+
+###  http://example.smartcontract.es/sc#Boolean
+:Boolean rdf:type owl:NamedIndividual ,
+                  :PrimitiveType .
+
+
+###  http://example.smartcontract.es/sc#Bytes
+:Bytes rdf:type owl:NamedIndividual ,
+                :ElementaryType .
+
+
+###  http://example.smartcontract.es/sc#Double
+:Double rdf:type owl:NamedIndividual ,
+                 :PrimitiveType .
+
+
+###  http://example.smartcontract.es/sc#Float
+:Float rdf:type owl:NamedIndividual ,
+                :PrimitiveType .
+
+
+###  http://example.smartcontract.es/sc#Integer
+:Integer rdf:type owl:NamedIndividual ,
+                  :ElementaryType .
+
+
+###  http://example.smartcontract.es/sc#Real
+:Real rdf:type owl:NamedIndividual ,
+               :PrimitiveType .
+
+
+###  http://example.smartcontract.es/sc#String
+:String rdf:type owl:NamedIndividual ,
+                 :ElementaryType .
+
+
+###  http://example.smartcontract.es/sc#Uint
+:Uint rdf:type owl:NamedIndividual ,
+               :PrimitiveType .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
