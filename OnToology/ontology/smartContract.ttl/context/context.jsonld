@@ -1,0 +1,155 @@
+{
+  "@context" : {
+    "hasIndex" : {
+      "@id" : "http://example.smartcontract.es/sc#hasIndex",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Struct" : {
+      "@id" : "http://example.smartcontract.es/sc#Struct"
+    },
+    "isConstant" : {
+      "@id" : "http://example.smartcontract.es/sc#isConstant",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasName" : {
+      "@id" : "http://example.smartcontract.es/sc#hasName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Map" : {
+      "@id" : "http://example.smartcontract.es/sc#Map"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "returnType" : {
+      "@id" : "http://example.smartcontract.es/sc#returnType",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "SolidityContract" : {
+      "@id" : "http://example.smartcontract.es/sc#SolidityContract"
+    },
+    "ConstantType" : {
+      "@id" : "http://example.smartcontract.es/sc#ConstantType"
+    },
+    "hasSet" : {
+      "@id" : "http://example.smartcontract.es/sc#hasSet",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "hasSimpleValue" : {
+      "@id" : "http://example.smartcontract.es/sc#hasSimpleValue",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Attribute" : {
+      "@id" : "http://example.smartcontract.es/sc#Attribute"
+    },
+    "hasMapKey" : {
+      "@id" : "http://example.smartcontract.es/sc#hasMapKey",
+      "@type" : "@id"
+    },
+    "hasMapKeyType" : {
+      "@id" : "http://example.smartcontract.es/sc#hasMapKeyType",
+      "@type" : "@id"
+    },
+    "hasInheritance" : {
+      "@id" : "http://example.smartcontract.es/sc#hasInheritance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasMapValue" : {
+      "@id" : "http://example.smartcontract.es/sc#hasMapValue",
+      "@type" : "@id"
+    },
+    "ElementaryType" : {
+      "@id" : "http://example.smartcontract.es/sc#ElementaryType"
+    },
+    "PrimitiveType" : {
+      "@id" : "http://example.smartcontract.es/sc#PrimitiveType"
+    },
+    "hasLenght" : {
+      "@id" : "http://example.smartcontract.es/sc#hasLenght",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ContractSpecification" : {
+      "@id" : "http://example.smartcontract.es/sc#ContractSpecification"
+    },
+    "hasVisibility" : {
+      "@id" : "http://example.smartcontract.es/sc#hasVisibility",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasArrayElement" : {
+      "@id" : "http://example.smartcontract.es/sc#hasArrayElement",
+      "@type" : "@id"
+    },
+    "arrayTypeData" : {
+      "@id" : "http://example.smartcontract.es/sc#arrayTypeData",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ElementInArray" : {
+      "@id" : "http://example.smartcontract.es/sc#ElementInArray"
+    },
+    "hasArrayDimension" : {
+      "@id" : "http://example.smartcontract.es/sc#hasArrayDimension",
+      "@type" : "@id"
+    },
+    "hasFunction" : {
+      "@id" : "http://example.smartcontract.es/sc#hasFunction",
+      "@type" : "@id"
+    },
+    "GolangContract" : {
+      "@id" : "http://example.smartcontract.es/sc#GolangContract"
+    },
+    "hasSimpleData" : {
+      "@id" : "http://example.smartcontract.es/sc#hasSimpleData",
+      "@type" : "@id"
+    },
+    "hasParameter" : {
+      "@id" : "http://example.smartcontract.es/sc#hasParameter",
+      "@type" : "@id"
+    },
+    "hasFunctionContent" : {
+      "@id" : "http://example.smartcontract.es/sc#hasFunctionContent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasMapElement" : {
+      "@id" : "http://example.smartcontract.es/sc#hasMapElement",
+      "@type" : "@id"
+    },
+    "Function" : {
+      "@id" : "http://example.smartcontract.es/sc#Function"
+    },
+    "hasAttribute" : {
+      "@id" : "http://example.smartcontract.es/sc#hasAttribute",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Array" : {
+      "@id" : "http://example.smartcontract.es/sc#Array"
+    },
+    "ArrayDimension" : {
+      "@id" : "http://example.smartcontract.es/sc#ArrayDimension"
+    },
+    "imports" : {
+      "@id" : "http://example.smartcontract.es/sc#imports",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "valueType" : {
+      "@id" : "http://example.smartcontract.es/sc#valueType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasGet" : {
+      "@id" : "http://example.smartcontract.es/sc#hasGet",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "SimpleAttribute" : {
+      "@id" : "http://example.smartcontract.es/sc#SimpleAttribute"
+    },
+    "MapElement" : {
+      "@id" : "http://example.smartcontract.es/sc#MapElement"
+    },
+    "contain" : {
+      "@id" : "http://example.smartcontract.es/sc#contain",
+      "@type" : "@id"
+    }
+  }
+}
