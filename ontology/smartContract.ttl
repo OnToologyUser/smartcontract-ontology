@@ -7,7 +7,7 @@
 @base <http://example.smartcontract.es/sc> .
 
 <http://example.smartcontract.es/sc> rdf:type owl:Ontology ;
-                                      owl:versionIRI <http://example.smartcontract.es/sc/0.8> .
+                                      owl:versionIRI <http://example.smartcontract.es/sc/0.9> .
 
 #################################################################
 #    Object Properties
