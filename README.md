@@ -1,1 +1,1 @@
-# smartcontract-ontology
+# smartcontract Ontology
