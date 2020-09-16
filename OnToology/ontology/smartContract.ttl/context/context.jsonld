@@ -4,19 +4,33 @@
       "@id" : "http://example.smartcontract.es/sc#hasIndex",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
-    "Struct" : {
-      "@id" : "http://example.smartcontract.es/sc#Struct"
+    "hasElement" : {
+      "@id" : "http://example.smartcontract.es/sc#hasElement"
     },
     "isConstant" : {
       "@id" : "http://example.smartcontract.es/sc#isConstant",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
+    "hasComplexType" : {
+      "@id" : "http://example.smartcontract.es/sc#hasComplexType",
+      "@type" : "@id"
+    },
     "hasName" : {
       "@id" : "http://example.smartcontract.es/sc#hasName",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "Visibility" : {
+      "@id" : "http://example.smartcontract.es/sc#Visibility"
+    },
+    "hasValue" : {
+      "@id" : "http://example.smartcontract.es/sc#hasValue",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
     "Map" : {
       "@id" : "http://example.smartcontract.es/sc#Map"
+    },
+    "FunctionModifier" : {
+      "@id" : "http://example.smartcontract.es/sc#FunctionModifier"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
@@ -24,6 +38,10 @@
     "returnType" : {
       "@id" : "http://example.smartcontract.es/sc#returnType",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "hasReturnFunction" : {
+      "@id" : "http://example.smartcontract.es/sc#hasReturnFunction",
+      "@type" : "@id"
     },
     "SolidityContract" : {
       "@id" : "http://example.smartcontract.es/sc#SolidityContract"
@@ -35,15 +53,22 @@
       "@id" : "http://example.smartcontract.es/sc#hasSet",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
-    "hasSimpleValue" : {
-      "@id" : "http://example.smartcontract.es/sc#hasSimpleValue",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
     "Attribute" : {
       "@id" : "http://example.smartcontract.es/sc#Attribute"
     },
     "hasMapKey" : {
       "@id" : "http://example.smartcontract.es/sc#hasMapKey",
+      "@type" : "@id"
+    },
+    "FunctionType" : {
+      "@id" : "http://example.smartcontract.es/sc#FunctionType"
+    },
+    "hasFunctionModifier" : {
+      "@id" : "http://example.smartcontract.es/sc#hasFunctionModifier",
+      "@type" : "@id"
+    },
+    "element" : {
+      "@id" : "http://example.smartcontract.es/sc#element",
       "@type" : "@id"
     },
     "hasMapKeyType" : {
@@ -58,8 +83,16 @@
       "@id" : "http://example.smartcontract.es/sc#hasMapValue",
       "@type" : "@id"
     },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
     "ElementaryType" : {
       "@id" : "http://example.smartcontract.es/sc#ElementaryType"
+    },
+    "hasMapValueType" : {
+      "@id" : "http://example.smartcontract.es/sc#hasMapValueType",
+      "@type" : "@id"
     },
     "PrimitiveType" : {
       "@id" : "http://example.smartcontract.es/sc#PrimitiveType"
@@ -70,6 +103,9 @@
     },
     "ContractSpecification" : {
       "@id" : "http://example.smartcontract.es/sc#ContractSpecification"
+    },
+    "ComplexTypes" : {
+      "@id" : "http://example.smartcontract.es/sc#ComplexTypes"
     },
     "hasVisibility" : {
       "@id" : "http://example.smartcontract.es/sc#hasVisibility",
@@ -94,12 +130,12 @@
       "@id" : "http://example.smartcontract.es/sc#hasFunction",
       "@type" : "@id"
     },
+    "hasData" : {
+      "@id" : "http://example.smartcontract.es/sc#hasData",
+      "@type" : "@id"
+    },
     "GolangContract" : {
       "@id" : "http://example.smartcontract.es/sc#GolangContract"
-    },
-    "hasSimpleData" : {
-      "@id" : "http://example.smartcontract.es/sc#hasSimpleData",
-      "@type" : "@id"
     },
     "hasParameter" : {
       "@id" : "http://example.smartcontract.es/sc#hasParameter",
@@ -116,6 +152,10 @@
     "Function" : {
       "@id" : "http://example.smartcontract.es/sc#Function"
     },
+    "hasContractReturn" : {
+      "@id" : "http://example.smartcontract.es/sc#hasContractReturn",
+      "@type" : "@id"
+    },
     "hasAttribute" : {
       "@id" : "http://example.smartcontract.es/sc#hasAttribute",
       "@type" : "@id"
@@ -131,10 +171,6 @@
     },
     "imports" : {
       "@id" : "http://example.smartcontract.es/sc#imports",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "valueType" : {
-      "@id" : "http://example.smartcontract.es/sc#valueType",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "hasGet" : {

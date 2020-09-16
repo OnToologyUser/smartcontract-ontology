@@ -10,14 +10,31 @@
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#isConstant"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasSet"
   } ]
 }, {
   "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://example.smartcontract.es/sc#ContractSpecification"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasComplexType"
+  } ]
+}, {
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://example.smartcontract.es/sc#hasAttribute"
@@ -26,22 +43,13 @@
     "@id" : "http://example.smartcontract.es/sc#Attribute"
   } ]
 }, {
-  "@id" : "_:genid12",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://example.smartcontract.es/sc#hasFunction"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://example.smartcontract.es/sc#Function"
-  } ]
-}, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasName"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "_:genid14",
@@ -55,17 +63,21 @@
 }, {
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasIndex"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasName"
   } ]
 }, {
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasParameter"
+    "@id" : "http://example.smartcontract.es/sc#element"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://example.smartcontract.es/sc#Attribute"
@@ -74,28 +86,36 @@
   "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasName"
+    "@id" : "http://example.smartcontract.es/sc#hasIndex"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
   "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasVisibility"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://example.smartcontract.es/sc#ContractSpecification"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasContractReturn"
   } ]
 }, {
   "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#returnType"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://example.smartcontract.es/sc#FunctionModifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasFunctionModifier"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -113,6 +133,32 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://example.smartcontract.es/sc#FunctionType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasReturnFunction"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://example.smartcontract.es/sc#Visibility"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasVisibility"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
@@ -120,7 +166,20 @@
     "@id" : "http://example.smartcontract.es/sc#hasFunctionContent"
   } ]
 }, {
-  "@id" : "_:genid21",
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasName"
+  } ]
+}, {
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://example.smartcontract.es/sc#hasMapElement"
@@ -129,7 +188,7 @@
     "@id" : "http://example.smartcontract.es/sc#MapElement"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://example.smartcontract.es/sc#hasMapKeyType"
@@ -138,16 +197,20 @@
     "@id" : "http://example.smartcontract.es/sc#ElementaryType"
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#valueType"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://example.smartcontract.es/sc#ComplexTypes"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasMapValueType"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://example.smartcontract.es/sc#hasMapKey"
@@ -156,7 +219,7 @@
     "@id" : "http://example.smartcontract.es/sc#Attribute"
   } ]
 }, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://example.smartcontract.es/sc#hasMapValue"
@@ -165,41 +228,13 @@
     "@id" : "http://example.smartcontract.es/sc#Attribute"
   } ]
 }, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasSimpleData"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://example.smartcontract.es/sc#PrimitiveType"
-  } ]
-}, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasSimpleValue"
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasInheritance"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#contain"
+    "@id" : "http://example.smartcontract.es/sc#hasData"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://example.smartcontract.es/sc#Array"
+    "@id" : "http://example.smartcontract.es/sc#ComplexTypes"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -208,32 +243,42 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://example.smartcontract.es/sc#ComplexTypes"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#arrayTypeData"
+    "@id" : "http://example.smartcontract.es/sc#hasData"
   } ]
 }, {
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#contain"
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://example.smartcontract.es/sc#Map"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasValue"
   } ]
 }, {
   "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#contain"
+    "@id" : "http://example.smartcontract.es/sc#hasInheritance"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://example.smartcontract.es/sc#SimpleAttribute"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://example.smartcontract.es/sc#hasValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://example.smartcontract.es/sc#hasIndex"
@@ -242,7 +287,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://example.smartcontract.es/sc#hasLenght"
@@ -251,26 +296,17 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasName"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://example.smartcontract.es/sc#Visibility"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasGet"
+    "@id" : "http://example.smartcontract.es/sc#hasVisibility"
   } ]
 }, {
   "@id" : "_:genid8",
@@ -283,7 +319,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasSet"
+    "@id" : "http://example.smartcontract.es/sc#hasGet"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -296,7 +332,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.smartcontract.es/sc#hasVisibility"
+    "@id" : "http://example.smartcontract.es/sc#hasName"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc",
@@ -321,20 +357,22 @@
     "@id" : "_:genid2"
   }, {
     "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#ArrayDimension",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Contains the dimension of an Array"
+    "@value" : "Contains the dimension of an Array. If the Array contains more than 1 dimension, then it need index [size] and lenght [value]"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Array Dimension"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid4"
-  }, {
     "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#Attribute",
@@ -343,13 +381,13 @@
     "@value" : "Attribute types"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid6"
-  }, {
     "@id" : "_:genid7"
   }, {
     "@id" : "_:genid8"
   }, {
     "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#Boolean",
@@ -357,6 +395,18 @@
 }, {
   "@id" : "http://example.smartcontract.es/sc#Bytes",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#ElementaryType" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#ComplexTypes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Other type of attributers (like functions)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Complex types"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid11"
+  } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#ConstantType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -368,8 +418,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://example.smartcontract.es/sc#SimpleAttribute"
-  }, {
-    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#ContractSpecification",
@@ -381,13 +429,13 @@
     "@value" : "Contract Specification"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid11"
-  }, {
     "@id" : "_:genid12"
   }, {
     "@id" : "_:genid13"
   }, {
     "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#Double",
@@ -402,7 +450,9 @@
     "@value" : "Element In Array"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid15"
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#ElementaryType",
@@ -426,15 +476,32 @@
     "@value" : "Define a function inside the contract"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid16"
-  }, {
-    "@id" : "_:genid17"
-  }, {
     "@id" : "_:genid18"
   }, {
     "@id" : "_:genid19"
   }, {
     "@id" : "_:genid20"
+  }, {
+    "@id" : "_:genid21"
+  }, {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  } ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#FunctionModifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Function Modifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Function Modifier"
+  } ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#FunctionType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Function Type"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#GolangContract",
@@ -463,11 +530,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://example.smartcontract.es/sc#Attribute"
   }, {
-    "@id" : "_:genid21"
+    "@id" : "_:genid24"
   }, {
-    "@id" : "_:genid22"
+    "@id" : "_:genid25"
   }, {
-    "@id" : "_:genid23"
+    "@id" : "_:genid26"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#MapElement",
@@ -479,9 +546,9 @@
     "@value" : "Map Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid24"
+    "@id" : "_:genid27"
   }, {
-    "@id" : "_:genid25"
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#PrimitiveType",
@@ -491,6 +558,11 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Primitive Type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://example.smartcontract.es/sc#ComplexTypes"
+  }, {
+    "@id" : "http://example.smartcontract.es/sc#FunctionType"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#Real",
@@ -507,9 +579,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://example.smartcontract.es/sc#Attribute"
   }, {
-    "@id" : "_:genid26"
+    "@id" : "_:genid29"
   }, {
-    "@id" : "_:genid27"
+    "@id" : "_:genid30"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#SolidityContract",
@@ -523,38 +595,26 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://example.smartcontract.es/sc#ContractSpecification"
   }, {
-    "@id" : "_:genid28"
+    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#String",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#ElementaryType" ]
 }, {
-  "@id" : "http://example.smartcontract.es/sc#Struct",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Define a Struct Attribute"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://example.smartcontract.es/sc#Attribute"
-  }, {
-    "@id" : "_:genid29"
-  }, {
-    "@id" : "_:genid30"
-  }, {
-    "@id" : "_:genid31"
-  } ]
-}, {
   "@id" : "http://example.smartcontract.es/sc#Uint",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#PrimitiveType" ]
 }, {
+  "@id" : "http://example.smartcontract.es/sc#Visibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://example.smartcontract.es/sc#arrayTypeData",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Indicate the value type of an Array"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#constructor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#FunctionType" ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#contain",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -564,6 +624,18 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "contains"
   } ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#element",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#enum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#FunctionType" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#FunctionType" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#external",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#Visibility" ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#hasArrayDimension",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -592,6 +664,24 @@
     "@value" : "has Attribute"
   } ]
 }, {
+  "@id" : "http://example.smartcontract.es/sc#hasComplexType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#hasContractReturn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#hasData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Used in simple class for specify the value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has Data"
+  } ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#hasElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
   "@id" : "http://example.smartcontract.es/sc#hasFunction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -611,6 +701,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#hasFunctionModifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Return of the function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has function modifier"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#hasGet",
@@ -697,6 +796,9 @@
     "@value" : "has Map Value"
   } ]
 }, {
+  "@id" : "http://example.smartcontract.es/sc#hasMapValueType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
   "@id" : "http://example.smartcontract.es/sc#hasName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -718,6 +820,12 @@
     "@value" : "has Parameter"
   } ]
 }, {
+  "@id" : "http://example.smartcontract.es/sc#hasReturnFunction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has Function Return"
+  } ]
+}, {
   "@id" : "http://example.smartcontract.es/sc#hasSet",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -730,29 +838,20 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "http://example.smartcontract.es/sc#hasSimpleData",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Used in simple class for specify the value"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has Simple Data"
-  } ]
-}, {
-  "@id" : "http://example.smartcontract.es/sc#hasSimpleValue",
+  "@id" : "http://example.smartcontract.es/sc#hasValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Indicate the value of a simple variable (for example, int a = 1, 1 is the value)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has simple value"
+    "@value" : "has value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#hasVisibility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Visibility of an Attribute"
   } ],
@@ -761,6 +860,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
   } ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#imports",
@@ -771,6 +873,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#internal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#Visibility" ]
 }, {
   "@id" : "http://example.smartcontract.es/sc#isConstant",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
@@ -784,6 +889,18 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
+  "@id" : "http://example.smartcontract.es/sc#modifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#FunctionType" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#private",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#Visibility" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#public",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#Visibility" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#pure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#FunctionModifier" ]
+}, {
   "@id" : "http://example.smartcontract.es/sc#returnType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -793,12 +910,12 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://example.smartcontract.es/sc#valueType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Indicate the Value Type of a Map"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
+  "@id" : "http://example.smartcontract.es/sc#struct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#FunctionType" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#view",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#FunctionModifier" ]
+}, {
+  "@id" : "http://example.smartcontract.es/sc#void",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://example.smartcontract.es/sc#FunctionType" ]
 } ]

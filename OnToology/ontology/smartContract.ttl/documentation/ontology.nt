@@ -14,6 +14,9 @@
 <http://example.smartcontract.es/sc#contain> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if an Attribute can contains other type of Attributes (ex. Struct can contain an Array)" .
 <http://example.smartcontract.es/sc#contain> <http://www.w3.org/2000/01/rdf-schema#label> "contains" .
 # 
+# http://example.smartcontract.es/sc#element
+<http://example.smartcontract.es/sc#element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # http://example.smartcontract.es/sc#hasArrayDimension
 <http://example.smartcontract.es/sc#hasArrayDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://example.smartcontract.es/sc#hasArrayDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between the Array and the dimension of this Array" .
@@ -29,10 +32,26 @@
 <http://example.smartcontract.es/sc#hasAttribute> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if the Contract has Attributes" .
 <http://example.smartcontract.es/sc#hasAttribute> <http://www.w3.org/2000/01/rdf-schema#label> "has Attribute" .
 # 
+# http://example.smartcontract.es/sc#hasComplexType
+<http://example.smartcontract.es/sc#hasComplexType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://example.smartcontract.es/sc#hasContractReturn
+<http://example.smartcontract.es/sc#hasContractReturn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://example.smartcontract.es/sc#hasData
+<http://example.smartcontract.es/sc#hasData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.smartcontract.es/sc#hasData> <http://www.w3.org/2000/01/rdf-schema#comment> "Used in simple class for specify the value" .
+<http://example.smartcontract.es/sc#hasData> <http://www.w3.org/2000/01/rdf-schema#label> "has Data" .
+# 
 # http://example.smartcontract.es/sc#hasFunction
 <http://example.smartcontract.es/sc#hasFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://example.smartcontract.es/sc#hasFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if the Contract has Functions" .
 <http://example.smartcontract.es/sc#hasFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has Function" .
+# 
+# http://example.smartcontract.es/sc#hasFunctionModifier
+<http://example.smartcontract.es/sc#hasFunctionModifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.smartcontract.es/sc#hasFunctionModifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Return of the function" .
+<http://example.smartcontract.es/sc#hasFunctionModifier> <http://www.w3.org/2000/01/rdf-schema#label> "has function modifier" .
 # 
 # http://example.smartcontract.es/sc#hasMapElement
 <http://example.smartcontract.es/sc#hasMapElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -54,15 +73,21 @@
 <http://example.smartcontract.es/sc#hasMapValue> <http://www.w3.org/2000/01/rdf-schema#comment> "In MapValues, indicate the value of a Value given a Map" .
 <http://example.smartcontract.es/sc#hasMapValue> <http://www.w3.org/2000/01/rdf-schema#label> "has Map Value" .
 # 
+# http://example.smartcontract.es/sc#hasMapValueType
+<http://example.smartcontract.es/sc#hasMapValueType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # http://example.smartcontract.es/sc#hasParameter
 <http://example.smartcontract.es/sc#hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://example.smartcontract.es/sc#hasParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate if the Function has a parameter (an Attribute value)" .
 <http://example.smartcontract.es/sc#hasParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has Parameter" .
 # 
-# http://example.smartcontract.es/sc#hasSimpleData
-<http://example.smartcontract.es/sc#hasSimpleData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.smartcontract.es/sc#hasSimpleData> <http://www.w3.org/2000/01/rdf-schema#comment> "Used in simple class for specify the value" .
-<http://example.smartcontract.es/sc#hasSimpleData> <http://www.w3.org/2000/01/rdf-schema#label> "has Simple Data" .
+# http://example.smartcontract.es/sc#hasReturnFunction
+<http://example.smartcontract.es/sc#hasReturnFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.smartcontract.es/sc#hasReturnFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has Function Return" .
+# 
+# http://example.smartcontract.es/sc#hasVisibility
+<http://example.smartcontract.es/sc#hasVisibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.smartcontract.es/sc#hasVisibility> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 # 
 # 
 # 
@@ -76,7 +101,9 @@
 # http://example.smartcontract.es/sc#arrayTypeData
 <http://example.smartcontract.es/sc#arrayTypeData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://example.smartcontract.es/sc#arrayTypeData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.smartcontract.es/sc#arrayTypeData> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the value type of an Array" .
+# 
+# http://example.smartcontract.es/sc#hasElement
+<http://example.smartcontract.es/sc#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
 # http://example.smartcontract.es/sc#hasFunctionContent
 <http://example.smartcontract.es/sc#hasFunctionContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -120,17 +147,15 @@
 <http://example.smartcontract.es/sc#hasSet> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if the Attribute has Setter functions" .
 <http://example.smartcontract.es/sc#hasSet> <http://www.w3.org/2000/01/rdf-schema#label> "has setter" .
 # 
-# http://example.smartcontract.es/sc#hasSimpleValue
-<http://example.smartcontract.es/sc#hasSimpleValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.smartcontract.es/sc#hasSimpleValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://example.smartcontract.es/sc#hasSimpleValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the value of a simple variable (for example, int a = 1, 1 is the value)" .
-<http://example.smartcontract.es/sc#hasSimpleValue> <http://www.w3.org/2000/01/rdf-schema#label> "has simple value" .
+# http://example.smartcontract.es/sc#hasValue
+<http://example.smartcontract.es/sc#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.smartcontract.es/sc#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://example.smartcontract.es/sc#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the value of a simple variable (for example, int a = 1, 1 is the value)" .
+<http://example.smartcontract.es/sc#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value" .
 # 
 # http://example.smartcontract.es/sc#hasVisibility
 <http://example.smartcontract.es/sc#hasVisibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://example.smartcontract.es/sc#hasVisibility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.smartcontract.es/sc#hasVisibility> <http://www.w3.org/2000/01/rdf-schema#comment> "Visibility of an Attribute" .
-<http://example.smartcontract.es/sc#hasVisibility> <http://www.w3.org/2000/01/rdf-schema#label> "has Visibility" .
 # 
 # http://example.smartcontract.es/sc#imports
 <http://example.smartcontract.es/sc#imports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -147,11 +172,6 @@
 <http://example.smartcontract.es/sc#returnType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://example.smartcontract.es/sc#returnType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://example.smartcontract.es/sc#returnType> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the return type of a function (the function return a integer, boolean, etc)" .
-# 
-# http://example.smartcontract.es/sc#valueType
-<http://example.smartcontract.es/sc#valueType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.smartcontract.es/sc#valueType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.smartcontract.es/sc#valueType> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate the Value Type of a Map" .
 # 
 # 
 # 
@@ -175,84 +195,100 @@ _:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontrac
 _:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#ElementInArray> .
 <http://example.smartcontract.es/sc#Array> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#arrayTypeData> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasData> .
 _:genid3 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://example.smartcontract.es/sc#ComplexTypes> .
+<http://example.smartcontract.es/sc#Array> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasValue> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://example.smartcontract.es/sc#Array> <http://www.w3.org/2000/01/rdf-schema#comment> "Define an Array Attribute" .
 # 
 # http://example.smartcontract.es/sc#ArrayDimension
 <http://example.smartcontract.es/sc#ArrayDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.smartcontract.es/sc#ArrayDimension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasIndex> .
-_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://example.smartcontract.es/sc#ArrayDimension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasLenght> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasIndex> .
 _:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://example.smartcontract.es/sc#ArrayDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the dimension of an Array" .
+<http://example.smartcontract.es/sc#ArrayDimension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasLenght> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.smartcontract.es/sc#ArrayDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the dimension of an Array. If the Array contains more than 1 dimension, then it need index [size] and lenght [value]" .
 <http://example.smartcontract.es/sc#ArrayDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Array Dimension" .
 # 
 # http://example.smartcontract.es/sc#Attribute
 <http://example.smartcontract.es/sc#Attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.smartcontract.es/sc#Attribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasName> .
-_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://example.smartcontract.es/sc#Attribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasGet> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasVisibility> .
 _:genid7 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://example.smartcontract.es/sc#Visibility> .
 <http://example.smartcontract.es/sc#Attribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasSet> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasGet> .
 _:genid8 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
 <http://example.smartcontract.es/sc#Attribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasVisibility> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasName> .
 _:genid9 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.smartcontract.es/sc#Attribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasSet> .
+_:genid10 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
 <http://example.smartcontract.es/sc#Attribute> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribute types" .
+# 
+# http://example.smartcontract.es/sc#ComplexTypes
+<http://example.smartcontract.es/sc#ComplexTypes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.smartcontract.es/sc#ComplexTypes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasComplexType> .
+_:genid11 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://example.smartcontract.es/sc#ContractSpecification> .
+<http://example.smartcontract.es/sc#ComplexTypes> <http://www.w3.org/2000/01/rdf-schema#comment> "Other type of attributers (like functions)" .
+<http://example.smartcontract.es/sc#ComplexTypes> <http://www.w3.org/2000/01/rdf-schema#label> "Complex types" .
 # 
 # http://example.smartcontract.es/sc#ConstantType
 <http://example.smartcontract.es/sc#ConstantType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://example.smartcontract.es/sc#ConstantType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.smartcontract.es/sc#SimpleAttribute> .
-<http://example.smartcontract.es/sc#ConstantType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#isConstant> .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
 <http://example.smartcontract.es/sc#ConstantType> <http://www.w3.org/2000/01/rdf-schema#comment> "Define if a SimpleAttribute is a constant (true) or a variable (false)" .
 <http://example.smartcontract.es/sc#ConstantType> <http://www.w3.org/2000/01/rdf-schema#label> "Constant Type" .
 # 
 # http://example.smartcontract.es/sc#ContractSpecification
 <http://example.smartcontract.es/sc#ContractSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.smartcontract.es/sc#ContractSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasAttribute> .
-_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Attribute> .
 <http://example.smartcontract.es/sc#ContractSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasFunction> .
-_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Function> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasAttribute> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Attribute> .
 <http://example.smartcontract.es/sc#ContractSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasName> .
-_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasFunction> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Function> .
 <http://example.smartcontract.es/sc#ContractSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#imports> .
 _:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.smartcontract.es/sc#ContractSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasName> .
+_:genid15 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://example.smartcontract.es/sc#ContractSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Define the name and the imports of the contract" .
 <http://example.smartcontract.es/sc#ContractSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Contract Specification" .
 # 
 # http://example.smartcontract.es/sc#ElementInArray
 <http://example.smartcontract.es/sc#ElementInArray> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.smartcontract.es/sc#ElementInArray> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasIndex> .
-_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.smartcontract.es/sc#ElementInArray> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#element> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Attribute> .
+<http://example.smartcontract.es/sc#ElementInArray> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasIndex> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://example.smartcontract.es/sc#ElementInArray> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the values of an Array" .
 <http://example.smartcontract.es/sc#ElementInArray> <http://www.w3.org/2000/01/rdf-schema#label> "Element In Array" .
 # 
@@ -264,28 +300,46 @@ _:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # 
 # http://example.smartcontract.es/sc#Function
 <http://example.smartcontract.es/sc#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.smartcontract.es/sc#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasParameter> .
-_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Attribute> .
-<http://example.smartcontract.es/sc#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasName> .
-_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://example.smartcontract.es/sc#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasVisibility> .
-_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasContractReturn> .
+_:genid18 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://example.smartcontract.es/sc#ContractSpecification> .
 <http://example.smartcontract.es/sc#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#returnType> .
-_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasFunctionModifier> .
+_:genid19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onClass> <http://example.smartcontract.es/sc#FunctionModifier> .
 <http://example.smartcontract.es/sc#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasFunctionContent> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasReturnFunction> .
 _:genid20 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid20 <http://www.w3.org/2002/07/owl#onClass> <http://example.smartcontract.es/sc#FunctionType> .
+<http://example.smartcontract.es/sc#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasVisibility> .
+_:genid21 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onClass> <http://example.smartcontract.es/sc#Visibility> .
+<http://example.smartcontract.es/sc#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasFunctionContent> .
+_:genid22 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.smartcontract.es/sc#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasName> .
+_:genid23 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://example.smartcontract.es/sc#Function> <http://www.w3.org/2000/01/rdf-schema#comment> "Define a function inside the contract" .
+# 
+# http://example.smartcontract.es/sc#FunctionModifier
+<http://example.smartcontract.es/sc#FunctionModifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.smartcontract.es/sc#FunctionModifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Function Modifier" .
+<http://example.smartcontract.es/sc#FunctionModifier> <http://www.w3.org/2000/01/rdf-schema#label> "Function Modifier" .
+# 
+# http://example.smartcontract.es/sc#FunctionType
+<http://example.smartcontract.es/sc#FunctionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.smartcontract.es/sc#FunctionType> <http://www.w3.org/2000/01/rdf-schema#label> "Function Type" .
 # 
 # http://example.smartcontract.es/sc#GolangContract
 <http://example.smartcontract.es/sc#GolangContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -297,78 +351,67 @@ _:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # http://example.smartcontract.es/sc#Map
 <http://example.smartcontract.es/sc#Map> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://example.smartcontract.es/sc#Map> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.smartcontract.es/sc#Attribute> .
-<http://example.smartcontract.es/sc#Map> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasMapElement> .
-_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#MapElement> .
-<http://example.smartcontract.es/sc#Map> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasMapKeyType> .
-_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#ElementaryType> .
-<http://example.smartcontract.es/sc#Map> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#valueType> .
-_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.smartcontract.es/sc#Map> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasMapElement> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#MapElement> .
+<http://example.smartcontract.es/sc#Map> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasMapKeyType> .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#ElementaryType> .
+<http://example.smartcontract.es/sc#Map> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasMapValueType> .
+_:genid26 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/2002/07/owl#onClass> <http://example.smartcontract.es/sc#ComplexTypes> .
 <http://example.smartcontract.es/sc#Map> <http://www.w3.org/2000/01/rdf-schema#comment> "Define a Map Attribute" .
 # 
 # http://example.smartcontract.es/sc#MapElement
 <http://example.smartcontract.es/sc#MapElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.smartcontract.es/sc#MapElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasMapKey> .
-_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Attribute> .
-<http://example.smartcontract.es/sc#MapElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasMapValue> .
-_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Attribute> .
+<http://example.smartcontract.es/sc#MapElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasMapKey> .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Attribute> .
+<http://example.smartcontract.es/sc#MapElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasMapValue> .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Attribute> .
 <http://example.smartcontract.es/sc#MapElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the values of a Map" .
 <http://example.smartcontract.es/sc#MapElement> <http://www.w3.org/2000/01/rdf-schema#label> "Map Element" .
 # 
 # http://example.smartcontract.es/sc#PrimitiveType
 <http://example.smartcontract.es/sc#PrimitiveType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.smartcontract.es/sc#PrimitiveType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.smartcontract.es/sc#ComplexTypes> .
+<http://example.smartcontract.es/sc#PrimitiveType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.smartcontract.es/sc#FunctionType> .
 <http://example.smartcontract.es/sc#PrimitiveType> <http://www.w3.org/2000/01/rdf-schema#comment> "Contains the primitive types values" .
 <http://example.smartcontract.es/sc#PrimitiveType> <http://www.w3.org/2000/01/rdf-schema#label> "Primitive Type" .
 # 
 # http://example.smartcontract.es/sc#SimpleAttribute
 <http://example.smartcontract.es/sc#SimpleAttribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://example.smartcontract.es/sc#SimpleAttribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.smartcontract.es/sc#Attribute> .
-<http://example.smartcontract.es/sc#SimpleAttribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasSimpleData> .
-_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#PrimitiveType> .
-<http://example.smartcontract.es/sc#SimpleAttribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasSimpleValue> .
-_:genid27 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://example.smartcontract.es/sc#SimpleAttribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasData> .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#ComplexTypes> .
+<http://example.smartcontract.es/sc#SimpleAttribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasValue> .
+_:genid30 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://example.smartcontract.es/sc#SimpleAttribute> <http://www.w3.org/2000/01/rdf-schema#comment> "Define a Simple Atttribute" .
 <http://example.smartcontract.es/sc#SimpleAttribute> <http://www.w3.org/2000/01/rdf-schema#label> "Simple Attribute" .
 # 
 # http://example.smartcontract.es/sc#SolidityContract
 <http://example.smartcontract.es/sc#SolidityContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://example.smartcontract.es/sc#SolidityContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.smartcontract.es/sc#ContractSpecification> .
-<http://example.smartcontract.es/sc#SolidityContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasInheritance> .
-_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.smartcontract.es/sc#SolidityContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#hasInheritance> .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://example.smartcontract.es/sc#SolidityContract> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate if the contract is written in Solidity" .
 <http://example.smartcontract.es/sc#SolidityContract> <http://www.w3.org/2000/01/rdf-schema#label> "Solidity Contract" .
 # 
-# http://example.smartcontract.es/sc#Struct
-<http://example.smartcontract.es/sc#Struct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.smartcontract.es/sc#Struct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.smartcontract.es/sc#Attribute> .
-<http://example.smartcontract.es/sc#Struct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#contain> .
-_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Array> .
-<http://example.smartcontract.es/sc#Struct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#contain> .
-_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#Map> .
-<http://example.smartcontract.es/sc#Struct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://example.smartcontract.es/sc#contain> .
-_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartcontract.es/sc#SimpleAttribute> .
-<http://example.smartcontract.es/sc#Struct> <http://www.w3.org/2000/01/rdf-schema#comment> "Define a Struct Attribute" .
+# http://example.smartcontract.es/sc#Visibility
+<http://example.smartcontract.es/sc#Visibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # 
 # 
@@ -415,4 +458,64 @@ _:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://example.smartco
 <http://example.smartcontract.es/sc#Uint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://example.smartcontract.es/sc#Uint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#PrimitiveType> .
 # 
-# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
+# http://example.smartcontract.es/sc#constructor
+<http://example.smartcontract.es/sc#constructor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#constructor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#FunctionType> .
+# 
+# http://example.smartcontract.es/sc#enum
+<http://example.smartcontract.es/sc#enum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#enum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#FunctionType> .
+# 
+# http://example.smartcontract.es/sc#event
+<http://example.smartcontract.es/sc#event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#FunctionType> .
+# 
+# http://example.smartcontract.es/sc#external
+<http://example.smartcontract.es/sc#external> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#external> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#Visibility> .
+# 
+# http://example.smartcontract.es/sc#internal
+<http://example.smartcontract.es/sc#internal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#internal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#Visibility> .
+# 
+# http://example.smartcontract.es/sc#modifier
+<http://example.smartcontract.es/sc#modifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#modifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#FunctionType> .
+# 
+# http://example.smartcontract.es/sc#private
+<http://example.smartcontract.es/sc#private> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#private> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#Visibility> .
+# 
+# http://example.smartcontract.es/sc#public
+<http://example.smartcontract.es/sc#public> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#public> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#Visibility> .
+# 
+# http://example.smartcontract.es/sc#pure
+<http://example.smartcontract.es/sc#pure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#pure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#FunctionModifier> .
+# 
+# http://example.smartcontract.es/sc#struct
+<http://example.smartcontract.es/sc#struct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#struct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#FunctionType> .
+# 
+# http://example.smartcontract.es/sc#view
+<http://example.smartcontract.es/sc#view> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#view> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#FunctionModifier> .
+# 
+# http://example.smartcontract.es/sc#void
+<http://example.smartcontract.es/sc#void> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.smartcontract.es/sc#void> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.smartcontract.es/sc#FunctionType> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://example.smartcontract.es/sc#hasVisibility> <http://www.w3.org/2000/01/rdf-schema#comment> "Visibility of an Attribute" .
+<http://example.smartcontract.es/sc#hasVisibility> <http://www.w3.org/2000/01/rdf-schema#label> "has Visibility" .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

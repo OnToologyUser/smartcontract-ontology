@@ -34,6 +34,13 @@
     
 
 
+    <!-- http://example.smartcontract.es/sc#element -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#element"/>
+    
+
+
     <!-- http://example.smartcontract.es/sc#hasArrayDimension -->
 
 
@@ -64,12 +71,46 @@
     
 
 
+    <!-- http://example.smartcontract.es/sc#hasComplexType -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#hasComplexType"/>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#hasContractReturn -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#hasContractReturn"/>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#hasData -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#hasData">
+        <rdfs:comment>Used in simple class for specify the value</rdfs:comment>
+        <rdfs:label>has Data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://example.smartcontract.es/sc#hasFunction -->
 
 
     <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#hasFunction">
         <rdfs:comment>Indicates if the Contract has Functions</rdfs:comment>
         <rdfs:label>has Function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#hasFunctionModifier -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#hasFunctionModifier">
+        <rdfs:comment>Return of the function</rdfs:comment>
+        <rdfs:label>has function modifier</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -114,6 +155,13 @@
     
 
 
+    <!-- http://example.smartcontract.es/sc#hasMapValueType -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#hasMapValueType"/>
+    
+
+
     <!-- http://example.smartcontract.es/sc#hasParameter -->
 
 
@@ -124,12 +172,20 @@
     
 
 
-    <!-- http://example.smartcontract.es/sc#hasSimpleData -->
+    <!-- http://example.smartcontract.es/sc#hasReturnFunction -->
 
 
-    <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#hasSimpleData">
-        <rdfs:comment>Used in simple class for specify the value</rdfs:comment>
-        <rdfs:label>has Simple Data</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#hasReturnFunction">
+        <rdfs:label>has Function Return</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#hasVisibility -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.smartcontract.es/sc#hasVisibility">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -151,8 +207,14 @@
 
     <owl:DatatypeProperty rdf:about="http://example.smartcontract.es/sc#arrayTypeData">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Indicate the value type of an Array</rdfs:comment>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#hasElement -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.smartcontract.es/sc#hasElement"/>
     
 
 
@@ -233,13 +295,13 @@
     
 
 
-    <!-- http://example.smartcontract.es/sc#hasSimpleValue -->
+    <!-- http://example.smartcontract.es/sc#hasValue -->
 
 
-    <owl:DatatypeProperty rdf:about="http://example.smartcontract.es/sc#hasSimpleValue">
+    <owl:DatatypeProperty rdf:about="http://example.smartcontract.es/sc#hasValue">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>Indicate the value of a simple variable (for example, int a = 1, 1 is the value)</rdfs:comment>
-        <rdfs:label>has simple value</rdfs:label>
+        <rdfs:label>has value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -249,8 +311,6 @@
 
     <owl:DatatypeProperty rdf:about="http://example.smartcontract.es/sc#hasVisibility">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Visibility of an Attribute</rdfs:comment>
-        <rdfs:label>has Visibility</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -286,16 +346,6 @@
     
 
 
-    <!-- http://example.smartcontract.es/sc#valueType -->
-
-
-    <owl:DatatypeProperty rdf:about="http://example.smartcontract.es/sc#valueType">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Indicate the Value Type of a Map</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -327,9 +377,15 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#arrayTypeData"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasData"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onClass rdf:resource="http://example.smartcontract.es/sc#ComplexTypes"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Define an Array Attribute</rdfs:comment>
@@ -353,7 +409,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Contains the dimension of an Array</rdfs:comment>
+        <rdfs:comment>Contains the dimension of an Array. If the Array contains more than 1 dimension, then it need index [size] and lenght [value]</rdfs:comment>
         <rdfs:label>Array Dimension</rdfs:label>
     </owl:Class>
     
@@ -365,8 +421,9 @@
     <owl:Class rdf:about="http://example.smartcontract.es/sc#Attribute">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasVisibility"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.smartcontract.es/sc#Visibility"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -378,19 +435,36 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasSet"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Attribute types</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#ComplexTypes -->
+
+
+    <owl:Class rdf:about="http://example.smartcontract.es/sc#ComplexTypes">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasVisibility"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasComplexType"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onClass rdf:resource="http://example.smartcontract.es/sc#ContractSpecification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Attribute types</rdfs:comment>
+        <rdfs:comment>Other type of attributers (like functions)</rdfs:comment>
+        <rdfs:label>Complex types</rdfs:label>
     </owl:Class>
     
 
@@ -400,12 +474,6 @@
 
     <owl:Class rdf:about="http://example.smartcontract.es/sc#ConstantType">
         <rdfs:subClassOf rdf:resource="http://example.smartcontract.es/sc#SimpleAttribute"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#isConstant"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>Define if a SimpleAttribute is a constant (true) or a variable (false)</rdfs:comment>
         <rdfs:label>Constant Type</rdfs:label>
     </owl:Class>
@@ -430,14 +498,15 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasName"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#imports"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#imports"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Define the name and the imports of the contract</rdfs:comment>
@@ -450,6 +519,12 @@
 
 
     <owl:Class rdf:about="http://example.smartcontract.es/sc#ElementInArray">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#element"/>
+                <owl:someValuesFrom rdf:resource="http://example.smartcontract.es/sc#Attribute"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasIndex"/>
@@ -479,26 +554,30 @@
     <owl:Class rdf:about="http://example.smartcontract.es/sc#Function">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasParameter"/>
-                <owl:someValuesFrom rdf:resource="http://example.smartcontract.es/sc#Attribute"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasContractReturn"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.smartcontract.es/sc#ContractSpecification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasFunctionModifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.smartcontract.es/sc#FunctionModifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasReturnFunction"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.smartcontract.es/sc#FunctionType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasVisibility"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#returnType"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.smartcontract.es/sc#Visibility"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -508,7 +587,33 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Define a function inside the contract</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#FunctionModifier -->
+
+
+    <owl:Class rdf:about="http://example.smartcontract.es/sc#FunctionModifier">
+        <rdfs:comment>Function Modifier</rdfs:comment>
+        <rdfs:label>Function Modifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#FunctionType -->
+
+
+    <owl:Class rdf:about="http://example.smartcontract.es/sc#FunctionType">
+        <rdfs:label>Function Type</rdfs:label>
     </owl:Class>
     
 
@@ -544,8 +649,9 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#valueType"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasMapValueType"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://example.smartcontract.es/sc#ComplexTypes"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Define a Map Attribute</rdfs:comment>
@@ -579,6 +685,8 @@
 
 
     <owl:Class rdf:about="http://example.smartcontract.es/sc#PrimitiveType">
+        <rdfs:subClassOf rdf:resource="http://example.smartcontract.es/sc#ComplexTypes"/>
+        <rdfs:subClassOf rdf:resource="http://example.smartcontract.es/sc#FunctionType"/>
         <rdfs:comment>Contains the primitive types values</rdfs:comment>
         <rdfs:label>Primitive Type</rdfs:label>
     </owl:Class>
@@ -592,13 +700,13 @@
         <rdfs:subClassOf rdf:resource="http://example.smartcontract.es/sc#Attribute"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasSimpleData"/>
-                <owl:someValuesFrom rdf:resource="http://example.smartcontract.es/sc#PrimitiveType"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasData"/>
+                <owl:someValuesFrom rdf:resource="http://example.smartcontract.es/sc#ComplexTypes"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasSimpleValue"/>
+                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#hasValue"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -625,31 +733,10 @@
     
 
 
-    <!-- http://example.smartcontract.es/sc#Struct -->
+    <!-- http://example.smartcontract.es/sc#Visibility -->
 
 
-    <owl:Class rdf:about="http://example.smartcontract.es/sc#Struct">
-        <rdfs:subClassOf rdf:resource="http://example.smartcontract.es/sc#Attribute"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#contain"/>
-                <owl:someValuesFrom rdf:resource="http://example.smartcontract.es/sc#Array"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#contain"/>
-                <owl:someValuesFrom rdf:resource="http://example.smartcontract.es/sc#Map"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.smartcontract.es/sc#contain"/>
-                <owl:someValuesFrom rdf:resource="http://example.smartcontract.es/sc#SimpleAttribute"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Define a Struct Attribute</rdfs:comment>
-    </owl:Class>
+    <owl:Class rdf:about="http://example.smartcontract.es/sc#Visibility"/>
     
 
 
@@ -743,10 +830,134 @@
     <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#Uint">
         <rdf:type rdf:resource="http://example.smartcontract.es/sc#PrimitiveType"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#constructor -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#constructor">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#FunctionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#enum -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#enum">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#FunctionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#event -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#event">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#FunctionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#external -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#external">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#Visibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#internal -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#internal">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#Visibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#modifier -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#modifier">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#FunctionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#private -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#private">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#Visibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#public -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#public">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#Visibility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#pure -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#pure">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#FunctionModifier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#struct -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#struct">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#FunctionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#view -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#view">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#FunctionModifier"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.smartcontract.es/sc#void -->
+
+
+    <owl:NamedIndividual rdf:about="http://example.smartcontract.es/sc#void">
+        <rdf:type rdf:resource="http://example.smartcontract.es/sc#FunctionType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://example.smartcontract.es/sc#hasVisibility">
+        <rdfs:comment>Visibility of an Attribute</rdfs:comment>
+        <rdfs:label>has Visibility</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
 
 

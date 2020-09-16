@@ -1,13 +1,14 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "base:GolangContract" "base:ConstantType" "base:SolidityContract" "base:ContractSpecification" "base:Struct" "base:Array" "base:Map" "base:SimpleAttribute" "base:Attribute" "base:ElementaryType" "base:PrimitiveType" ; /*classes style*/
+node [shape = rectangle, color="black"]; "base:GolangContract" "base:ConstantType" "base:FunctionType" "base:SolidityContract" "base:ContractSpecification" "base:Array" "base:Map" "base:ComplexTypes" "base:SimpleAttribute" "base:Attribute" "base:ElementaryType" "base:PrimitiveType" ; /*classes style*/
 	"base:ConstantType" -> "base:SimpleAttribute" [ label = "rdfs:subClassOf" ];
 	"base:Array" -> "base:Attribute" [ label = "rdfs:subClassOf" ];
+	"base:PrimitiveType" -> "base:FunctionType" [ label = "rdfs:subClassOf" ];
+	"base:PrimitiveType" -> "base:ComplexTypes" [ label = "rdfs:subClassOf" ];
 	"base:ElementaryType" -> "base:PrimitiveType" [ label = "rdfs:subClassOf" ];
 	"base:GolangContract" -> "base:ContractSpecification" [ label = "rdfs:subClassOf" ];
 	"base:SolidityContract" -> "base:ContractSpecification" [ label = "rdfs:subClassOf" ];
-	"base:Struct" -> "base:Attribute" [ label = "rdfs:subClassOf" ];
 	"base:Map" -> "base:Attribute" [ label = "rdfs:subClassOf" ];
 	"base:SimpleAttribute" -> "base:Attribute" [ label = "rdfs:subClassOf" ];
 
